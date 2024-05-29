@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploratory Data Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exploratory Data Analysis</h1>
+
+        <h2>Checkout Price vs. Number of Orders</h2>
+        <img src="data:image/png;base64,{{ scatter_checkout_num_orders_img }}" alt="Scatter Plot of Checkout Price vs. Number of Orders" class="img-fluid">
+
+        <h2>Demand by Category</h2>
+        <img src="data:image/png;base64,{{ bar_category_img }}" alt="Bar Plot of Demand by Category" class="img-fluid">
+
+        <h2>Base Price vs. Checkout Price</h2>
+        <img src="data:image/png;base64,{{ scatter_base_checkout_price_img }}" alt="Scatter Plot of Base Price vs. Checkout Price" class="img-fluid">
+
+        <h2>Demand based on Promotional Activities</h2>
+        <img src="data:image/png;base64,{{ bar_promo_img }}" alt="Bar Plot of Demand based on Promotional Activities" class="img-fluid">
+
+        <h2>Distribution of Checkout Prices</h2>
+        <img src="data:image/png;base64,{{ dist_checkout_price_img }}" alt="Histogram of Distribution of Checkout Prices" class="img-fluid">
+
+        <h2>Number of Orders by Cuisine</h2>
+        <img src="data:image/png;base64,{{ box_orders_cuisine_img }}" alt="Box Plot of Number of Orders by Cuisine" class="img-fluid">
+    </div>
+</body>
+</html>

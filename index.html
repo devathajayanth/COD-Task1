@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Demand Forecasting</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
+">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Demand Forecasting</h1>
+
+        <h2>Data Insights</h2>
+        {{ data_insights|safe }}
+
+        <h2>Distribution of Number of Orders</h2>
+        <img src="data:image/png;base64,{{ hist_img }}" alt="Histogram of Number of Orders" class="img-fluid">
+
+        <h2>Distribution of Center Types</h2>
+        <img src="data:image/png;base64,{{ bar_center_type_img }}" alt="Bar Plot of Center Types" class="img-fluid">
+
+        <h2>Distribution of Cuisines</h2>
+        <img src="data:image/png;base64,{{ pie_cuisine_img }}" alt="Pie Chart of Cuisines" class="img-fluid">
+
+        <h2>Total Orders Over Time</h2>
+        <img src="data:image/png;base64,{{ line_orders_img }}" alt="Line Plot of Total Orders Over Time" class="img-fluid">
+
+        <h2>Seasonal Decomposition of Orders</h2>
+        <img src="data:image/png;base64,{{ seasonal_decompose_img }}" alt="Seasonal Decomposition Plot" class="img-fluid">
+
+        <h2>Correlation Matrix</h2>
+        <img src="data:image/png;base64,{{ heatmap_corr_img }}" alt="Heatmap of Correlation Matrix" class="img-fluid">
+
+        <h2>Demand Forecasting using Holt-Winters</h2>
+        <img src="data:image/png;base64,{{ forecast_img }}" alt="Forecasting Plot" class="img-fluid">
+        <p>Root Mean Squared Error (RMSE): {{ rmse }}</p>
+
+        <h2>Top 3 Cuisines</h2>
+        {{ top_3_cuisines|safe }}
+
+        <h2>Top 3 Weeks with High Orders</h2>
+        {{ top_3_weeks|safe }}
+
+        <h2>Top 3 Predicted Cuisines</h2>
+        {{ top_3_predicted_cuisines|safe }}
+
+        <a href="/eda" class="btn btn-primary">Explore EDA</a>
+    </div>
+</body>
+</html>
